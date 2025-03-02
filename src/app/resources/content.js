@@ -1,27 +1,18 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Anandan",
+  lastName: "S",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "Tamil Nadu/India", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
 
-const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
-  ),
-};
+
 
 const social = [
   // Links are automatically displayed.
@@ -29,12 +20,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/Anan002",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/anandan-s-b8036b194/",
   },
   {
     name: "X",
@@ -44,19 +35,19 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:anandanhammed002@gmail.com",
   },
 ];
 
 const home = {
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `${person.name} Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Software engineer and client handler</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Anandan, a software engineer,specializing in building intuitive and seamless user experiences.
+      <br />Beyond work, I dedicate my time to personal growth—whether it's hitting the gym , or exploring new technologies.
     </>
   ),
 };
@@ -282,4 +273,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social,home, about, blog, work, gallery };
