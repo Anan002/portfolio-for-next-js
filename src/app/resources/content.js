@@ -9,7 +9,7 @@ const person = {
   role: "Software Engineer",
   avatar: "/images/avatar.jpg",
   location: "Tamil Nadu/India", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Tamil", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 
@@ -72,9 +72,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I am a proactive Software Engineer with years of experience in designing, developing, and deploying scalable applications.
+        Beyond technical development, I specialize in client engagement, facilitating seamless collaboration between stakeholders and development teams.
+        My expertise lies in requirement analysis, translating business objectives into technical solutions, and delivering ongoing support to ensure optimal client satisfaction.
       </>
     ),
   },
