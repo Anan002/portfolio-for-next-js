@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column } from "@/once-ui/components";
-import { Projects } from "@/components/work/Projects";
+import {HomeProjects} from "../components/work/HomeProjects"
 
 import { baseURL, routes } from "@/app/resources";
 import { home, about, person } from "@/app/resources/content";
@@ -98,7 +98,7 @@ export default function Home() {
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
+        <HomeProjects range={[1, 1]} />
       </RevealFx>
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
@@ -112,8 +112,7 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-      <Projects range={[2]} />
-
+           <HomeProjects range={[2]} />
     </Column>
   );
 }

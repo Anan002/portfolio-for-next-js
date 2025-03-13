@@ -1,12 +1,12 @@
 import { getPosts } from "@/app/utils/utils";
 import { Column } from "@/once-ui/components";
-import { WorkProjectCard } from "../WorkProjectCard";
+import { ProjectCard } from "@/components";
 
-interface WorkProjectsProps {
+interface ProjectsProps {
   range?: [number, number?];
 }
 
-export function Projects({ range }: WorkProjectsProps) {
+export function HomeProjects({ range }: ProjectsProps) {
   let allProjects = getPosts(["src", "app", "work", "projects"]);
 
   const sortedProjects = allProjects.sort((a, b) => {
@@ -20,7 +20,7 @@ export function Projects({ range }: WorkProjectsProps) {
   return (
     <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
       {displayedProjects.map((post, index) => (
-        <WorkProjectCard
+        <ProjectCard
           priority={index < 2}
           key={post.slug}
           href={`work/${post.slug}`}

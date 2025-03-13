@@ -339,8 +339,6 @@ export default function About() {
               </Column>
             </>
           )}
-
-      
         </Column>
       </Flex>
     </Column>
