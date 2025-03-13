@@ -86,5 +86,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
       </Flex>
     </Column>
+    
   );
 };
