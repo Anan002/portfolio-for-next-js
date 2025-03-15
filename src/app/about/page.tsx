@@ -15,6 +15,7 @@ import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
 
+
 export async function generateMetadata() {
   const title = about.title;
   const description = about.description;
@@ -209,31 +210,28 @@ export default function About() {
               </Column>
             </>
           )} */}
-
-          {about.technical.display && (
-            <>
-              <Heading
-                as="h2"
-                id={about.technical.title}
-                variant="display-strong-s"
-                marginBottom="40"
-              >
-                {about.technical.title}
-              </Heading>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "15px", marginBottom: "40px" }}>
-                {about.technical.skills.map((skill, index) => (
-                  <div key={`${skill}-${index}`} style={{ padding: "10px", background: "#0000", borderRadius: "8px" }}>
-                    <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
-
-
+{about.technical.display && (
+  <>
+    <Heading
+      as="h2"
+      id={about.technical.title}
+      variant="display-strong-s"
+      marginBottom="40"
+    >
+      {about.technical.title}
+    </Heading>
+    <div className={styles.gridContainer}>
+      {about.technical.skills.map((skill, index) => (
+        <div key={`${skill}-${index}`} className={styles.gridItem}>
+          <Text variant="heading-strong-l">{skill.title}</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">
+            {skill.description}
+          </Text>
+        </div>
+      ))}
+    </div>
+  </>
+)}
           {about.work.display && (
             <>
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
