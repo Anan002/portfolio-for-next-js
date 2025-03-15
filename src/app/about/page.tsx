@@ -52,6 +52,11 @@ export default function About() {
       items: [],
     },
     {
+      title: about.technical.title,
+      display: about.technical.display,
+      items: about.technical.skills.map((skill) => skill.title),
+    },
+    {
       title: about.work.title,
       display: about.work.display,
       items: about.work.experiences.map((experience) => experience.company),
@@ -61,11 +66,7 @@ export default function About() {
       display: about.studies.display,
       items: about.studies.institutions.map((institution) => institution.name),
     },
-    {
-      title: about.technical.title,
-      display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
-    },
+ 
   ];
   return (
     <Column maxWidth="m">
@@ -138,31 +139,7 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {/* {about.calendar.display && (
-              <Flex
-                fitWidth
-                border="brand-alpha-medium"
-                className={styles.blockAlign}
-                style={{
-                  backdropFilter: "blur(var(--static-space-1))",
-                }}
-                background="brand-alpha-weak"
-                radius="full"
-                padding="4"
-                gap="8"
-                marginBottom="m"
-                vertical="center"
-              >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Flex paddingX="8">Schedule a call</Flex>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
-              </Flex>
-            )} */}
+       
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
@@ -209,7 +186,7 @@ export default function About() {
             </Column>
           )}
 
-{about.technical.display && (
+{/* {about.technical.display && (
             <>
               <Heading
                 as="h2"
@@ -226,37 +203,36 @@ export default function About() {
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
                     </Text>
-                    {/* {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )} */}
+                   
                   </Column>
                 ))}
               </Column>
             </>
+          )} */}
+
+          {about.technical.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.technical.title}
+                variant="display-strong-s"
+                marginBottom="40"
+              >
+                {about.technical.title}
+              </Heading>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "15px", marginBottom: "40px" }}>
+                {about.technical.skills.map((skill, index) => (
+                  <div key={`${skill}-${index}`} style={{ padding: "10px", background: "#0000", borderRadius: "8px" }}>
+                    <Text variant="heading-strong-l">{skill.title}</Text>
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {skill.description}
+                    </Text>
+                  </div>
+                ))}
+              </div>
+            </>
           )}
+
 
           {about.work.display && (
             <>
@@ -288,32 +264,7 @@ export default function About() {
                         </Text>
                       ))}
                     </Column>
-                    {/* {experience.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
-                        {experience.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )} */}
+                   
                   </Column>
                 ))}
               </Column>

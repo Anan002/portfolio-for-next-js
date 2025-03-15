@@ -78,6 +78,44 @@ const about = {
       </>
     ),
   },
+  technical: {
+    display: true, // set to false to hide this section
+    title: "Technical skills",
+    skills: [
+      {
+        title: ".NET Frameworks",
+        description: <>- ASP.NET Weforms, MVC, .NET Core.</>,
+      },
+      {
+        title: "Development Tool",
+        description: <>- Visual Studio</>,
+      },
+      {
+        title: "Presentation Tier",
+        description: <>- Angular, Web Forms, HTML,CSS, Java Scripts.</>,
+      },
+      {
+        title: "Middle Tier",
+        description: <>- Web Services,Window Services, API, C#.</>,
+      },
+      {
+        title: "DataTier",
+        description: <>- DataAccess Components& Stored Procedures(ADO.NET), Entity framework.</>,
+      },
+      {
+        title: "Databases",
+        description: <>- Microsoft SQL Server, Oracle DB.</>,
+      },
+      {
+        title: "API Testing Tool",
+        description: <>- Postman</>,
+      },
+      {
+        title: "DeveOps Tool",
+        description: <>- Azure Deveops and GitLab.</>,
+      },
+    ],
+  },
   work: {
     display: true, // set to false to hide this section
     title: "Work Experience",
@@ -138,44 +176,7 @@ const about = {
       },
     ],
   },
-  technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
-  },
+
 };
 
 const blog = {
