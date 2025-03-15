@@ -112,7 +112,6 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-           <HomeProjects range={[2]} />
     </Column>
   );
 }
