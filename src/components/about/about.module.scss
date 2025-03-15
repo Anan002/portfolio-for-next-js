@@ -25,3 +25,23 @@
         align-self: center;
     }
 }
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .gridItem {
+    padding: 10px;
+    background: #0000;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .gridContainer {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    }
+  }
+  
