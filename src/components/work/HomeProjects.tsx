@@ -9,9 +9,14 @@ interface ProjectsProps {
 export function HomeProjects({ range }: ProjectsProps) {
   let allProjects = getPosts(["src", "app", "work", "projects"]);
 
+  const projectOrder = ["1_FossilandWSI", "2_NRL", "3_DBCorp","4_RevalERP","5_ValetRequest"];
+
   const sortedProjects = allProjects.sort((a, b) => {
-    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
+    const indexA = projectOrder.indexOf(a.slug);
+    const indexB = projectOrder.indexOf(b.slug);
+    return indexA - indexB;
   });
+
 
   const displayedProjects = range
     ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)

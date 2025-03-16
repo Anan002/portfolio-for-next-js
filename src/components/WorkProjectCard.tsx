@@ -34,8 +34,11 @@ export const WorkProjectCard: React.FC<ProjectCardProps & { index: number }> = (
 }) => {
   // Dynamic case study links for the first two projects
   const caseStudyLinks: { [key: number]: string } = {
-    0: "/work/FossilandWSI",
-    1: "/work/NRL",
+    0: "/work/1_FossilandWSI",
+    1: "/work/2_NRL",
+    2: "/work/3_DBCorp",
+    3: "/work/4_RevalERP",
+    4: "/work/5_ValetRequest"
   };
 
   return (
