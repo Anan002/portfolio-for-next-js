@@ -58,6 +58,11 @@ export default function About() {
       items: about.technical.skills.map((skill) => skill.title),
     },
     {
+      title: about.interpersonal.title,
+      display: about.interpersonal.display,
+      items: about.interpersonal.skills.map((skill) => skill.title),
+    },
+    {
       title: about.work.title,
       display: about.work.display,
       items: about.work.experiences.map((experience) => experience.company),
@@ -187,7 +192,7 @@ export default function About() {
             </Column>
           )}
 
-{/* {about.technical.display && (
+          {about.technical.display && (
             <>
               <Heading
                 as="h2"
@@ -197,41 +202,56 @@ export default function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
+              <div className={styles.gridContainer}>
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                  <div key={`${skill}-${index}`} className={styles.gridItem}>
                     <Text variant="heading-strong-l">{skill.title}</Text>
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
                     </Text>
-                   
-                  </Column>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
+         {about.interpersonal.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.interpersonal.title}
+                variant="display-strong-s"
+                marginBottom="40"
+              >
+                {about.interpersonal.title}
+              </Heading>
+              <Column
+                fillWidth
+                gap="l"
+                marginBottom="40"
+                style={{ 
+                  display: "grid", 
+                  gridTemplateColumns: "repeat(2, auto)", 
+                  gap: "10px" 
+                }}
+              >
+                {about.interpersonal.skills.map((skill, index) => (
+                  <Text 
+                    as="li" 
+                    variant="body-default-m" 
+                    key={`${skill.title}-${index}`} 
+                    style={{ gridRow: Math.floor(index / 2) + 1, gridColumn: (index % 2) + 1 }}
+                  >
+                    {skill.title}
+                  </Text>
                 ))}
               </Column>
+
+
             </>
-          )} */}
-{about.technical.display && (
-  <>
-    <Heading
-      as="h2"
-      id={about.technical.title}
-      variant="display-strong-s"
-      marginBottom="40"
-    >
-      {about.technical.title}
-    </Heading>
-    <div className={styles.gridContainer}>
-      {about.technical.skills.map((skill, index) => (
-        <div key={`${skill}-${index}`} className={styles.gridItem}>
-          <Text variant="heading-strong-l">{skill.title}</Text>
-          <Text variant="body-default-m" onBackground="neutral-weak">
-            {skill.description}
-          </Text>
-        </div>
-      ))}
-    </div>
-  </>
-)}
+          )}
+
+
           {about.work.display && (
             <>
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">

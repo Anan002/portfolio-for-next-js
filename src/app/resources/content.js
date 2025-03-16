@@ -116,49 +116,53 @@ const about = {
       },
     ],
   },
+  interpersonal: {
+    display: true, // set to false to hide this section
+    title: "Interpersonal skills",
+    skills: [
+      {
+        title: "Communication Skills",
+      },
+      {
+        title: "Client Relationship Management",
+      },
+      {
+        title: "Presentation Skills",
+      },
+      {
+        title: "Project Management",
+      },
+      {
+        title: "Strategic Thinking",
+      },
+    ],
+  },
   work: {
     display: true, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Revalsys Technology",
+        timeframe: "Feb 2024 - Present",
+        role: "Software Developer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Efficiently handled client interactions, provided innovative ideas for project features, and contributed to business growth.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Initiated project planning and developed dynamic database structures, significantly enhancing development efficiency.
           </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Voltech It Services",
+        timeframe: "Nov 2022 - Dec 2023",
+        role: "Dot Net Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Launched my career by gaining hands-on experience with fundamental concepts and core development practices.
           </>,
         ],
-        images: [],
       },
     ],
   },
@@ -167,12 +171,8 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Vel Tech Multi Tech Engineering College",
+        description: <>Studied Biomedical engineering.</>,
       },
     ],
   },
