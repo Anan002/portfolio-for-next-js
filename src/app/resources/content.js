@@ -143,7 +143,7 @@ const about = {
     experiences: [
       {
         company: "Revalsys Technology",
-        timeframe: "Feb 2024 - Present",
+        timeframe: "2024 - Present",
         role: "Software Developer",
         achievements: [
           <>
@@ -156,7 +156,7 @@ const about = {
       },
       {
         company: "Voltech It Services",
-        timeframe: "Nov 2022 - Dec 2023",
+        timeframe: "2022 - 2023",
         role: "Dot Net Developer",
         achievements: [
           <>
