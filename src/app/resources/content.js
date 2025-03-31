@@ -181,7 +181,7 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about what I am seeing...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -242,17 +242,17 @@ const gallery = {
       orientation: "vertical",
     },
     {
+      src: "/images/gallery/img-11.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
       src: "/images/gallery/img-09.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
+      src: "/images/gallery/img-15.jpg",
       alt: "image",
       orientation: "vertical",
     },
@@ -267,7 +267,23 @@ const gallery = {
       orientation: "horizontal",
     },
     {
+      src: "/images/gallery/img-10.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+
+    {
+      src: "/images/gallery/img-16.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
       src: "/images/gallery/img-14.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/img-17.jpg",
       alt: "image",
       orientation: "horizontal",
     },
