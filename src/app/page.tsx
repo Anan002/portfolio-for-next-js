@@ -20,13 +20,7 @@ export async function generateMetadata() {
       title,
       description,
       type: "website",
-      url: `https://${baseURL}`,
-      images: [
-        {
-          url: ogImage,
-          alt: title,
-        },
-      ],
+      url: `https://${baseURL}`
     },
     twitter: {
       card: "summary_large_image",

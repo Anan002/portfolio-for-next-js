@@ -23,15 +23,7 @@ export async function generateMetadata() {
       title: `${person.firstName}'s Portfolio`,
       description: "Portfolio website showcasing my work.",
       url: `https://${baseURL}`,
-      siteName: `${person.firstName}'s Portfolio`,
-      locale: "en_US",
-      type: "website",
-      images: [
-        {
-          url: ogImage,
-          alt: title,
-        },
-      ],
+      type: "website"
     },
     robots: {
       index: true,
