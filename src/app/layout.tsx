@@ -13,6 +13,8 @@ import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 
 export async function generateMetadata() {
+  const title = home.title;
+  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
   return {
     metadataBase: new URL(`https://${baseURL}`),
     title: home.title,
@@ -24,6 +26,12 @@ export async function generateMetadata() {
       siteName: `${person.firstName}'s Portfolio`,
       locale: "en_US",
       type: "website",
+      images: [
+        {
+          url: ogImage,
+          alt: title,
+        },
+      ],
     },
     robots: {
       index: true,
