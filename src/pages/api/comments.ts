@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 const prisma = new PrismaClient();
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    console.log("Received request:", req.method, req.query);
   if (req.method === "POST") {
     const { name, email, content, blogId } = req.body;
 
@@ -35,10 +36,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
+        console.log("Fetching comments for blogId:", blogId);
       const comments = await prisma.comment.findMany({
         where: { blogId },
         orderBy: { createdAt: "desc" },
       });
+      console.log("Fetching comments for comments:", comments);
       res.status(200).json(comments);
     } catch (error) {
       console.error("Error fetching comments:", error);
