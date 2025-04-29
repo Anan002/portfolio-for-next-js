@@ -1,17 +1,25 @@
 import { PrismaClient } from "@prisma/client";
+import type { NextApiRequest, NextApiResponse } from "next";
+
 const prisma = new PrismaClient();
 
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const { name, email, content, blogId } = req.body;
 
-    if (!blogId || !content.trim()) {
+    // Validate input
+    if (!blogId || typeof blogId !== "string" || !content?.trim()) {
       return res.status(400).json({ error: "blogId and content are required." });
     }
 
     try {
       const comment = await prisma.comment.create({
-        data: { name, email, content, blogId },
+        data: {
+          name,
+          email,
+          content,
+          blogId, // blogId is a string slug like "A-Cup-Of-Tea"
+        },
       });
       res.status(201).json(comment);
     } catch (error) {
@@ -22,8 +30,8 @@ export default async function handler(req, res) {
   } else if (req.method === "GET") {
     const blogId = req.query.blogId;
 
-    if (!blogId) {
-      return res.status(400).json({ error: "Missing blogId in query." });
+    if (!blogId || typeof blogId !== "string") {
+      return res.status(400).json({ error: "Missing or invalid blogId in query." });
     }
 
     try {
