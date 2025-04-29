@@ -6,6 +6,7 @@ import { baseURL } from "@/app/resources";
 import { person } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
+import CommentSection from "@/components/blog/CommentSection";
 
 interface BlogParams {
   params: {
@@ -109,6 +110,7 @@ export default function Blog({ params }: BlogParams) {
       </Row>
       <Column as="article" fillWidth>
         <CustomMDX source={post.content} />
+        <CommentSection blogId={post.slug} />
       </Column>
       <ScrollToHash />
     </Column>
