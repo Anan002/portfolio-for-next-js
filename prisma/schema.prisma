@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgres"
-  url      = env("DATABASE_POSTGRES_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Comment {
@@ -13,5 +13,13 @@ model Comment {
   email     String
   content   String
   blogId    String
+  createdAt DateTime @default(now())
+}
+
+model ErrorLog {
+  id        Int      @id @default(autoincrement())
+  message   String
+  stack     String?
+  path      String
   createdAt DateTime @default(now())
 }
