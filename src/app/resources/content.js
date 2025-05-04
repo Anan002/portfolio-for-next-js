@@ -111,7 +111,7 @@ const about = {
         description: <>- Postman</>,
       },
       {
-        title: "DeveOps Tool",
+        title: "DevOps Tool",
         description: <>- Azure Deveops and GitLab.</>,
       },
     ],
@@ -134,6 +134,9 @@ const about = {
       },
       {
         title: "Strategic Thinking",
+      },
+      {
+        title: "Team Lead",
       },
     ],
   },
