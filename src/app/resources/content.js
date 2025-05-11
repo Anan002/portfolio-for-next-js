@@ -12,8 +12,6 @@ const person = {
   languages: ["Tamil", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
-
-
 const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
